@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 const connectDB = ()=>{
     mongoose.connect(process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("Database connected succesfully")
+    .then((c) => {
+        console.log(`Database Conneced with ${c.connection.host}`)
     }).catch(e => { console.log(e) })
 }
 
