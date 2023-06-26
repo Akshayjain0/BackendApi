@@ -22,6 +22,9 @@ app.use(cors({
 // Using Routes 
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/task', taskRouter)
+app.get('/', (req, res)=>{
+    res.send("Nice working")
+})
 
 // Using error middlewares
 
